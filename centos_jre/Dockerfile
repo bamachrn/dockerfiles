@@ -20,7 +20,7 @@ RUN yum -y update && \
     # python-software-properties && \
     mkdir /var/run/sshd && \
     sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd && \
-    echo "%sudo ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers && \
+    echo "user ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers && \
     sed -i 's/Defaults    requiretty/#Defaults    requiretty/g' /etc/sudoers && \
     useradd -u 1000 -G users,wheel -d /home/user --shell /bin/bash -m user && \
     echo -e "secret\nsecret" | passwd user && \

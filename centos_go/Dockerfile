@@ -2,8 +2,8 @@ FROM registry.centos.org/dharmit/centos_jre
 
 MAINTAINER Dharmit Shah <dshah@redhat.com>
 
-RUN yum -y update && yum -y install golang
-RUN mkdir -p /go/src /go/bin && chmod -R 777 /go
+RUN sudo yum -y update && sudo yum -y install golang
+RUN sudo mkdir -p /go/src /go/bin && sudo chmod -R 777 /go
 
 RUN sed -i '$ d' /home/user/.bashrc
 ENV GOPATH /go
