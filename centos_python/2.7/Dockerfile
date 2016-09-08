@@ -1,4 +1,4 @@
-FROM registry.centos.org/dharmit/centos_jre
+FROM registry.centos.org/eclipse/centos_jre
 
 MAINTAINER Dharmit Shah <dshah@redhat.com>
 
