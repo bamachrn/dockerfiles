@@ -1,4 +1,4 @@
-FROM registry.centos.org/eclipse/centos_jre
+FROM registry.centos.org/eclipse/centos-jre:latest
 
 MAINTAINER Dharmit Shah <dshah@redhat.com>
 
