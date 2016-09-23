@@ -7,7 +7,12 @@ RUN sudo yum -y update && \
     sudo yum -y install rh-python35 && \
     sudo yum clean all
 
+RUN sudo yum -y install epel-release && \
+    sudo yum -y install python-pip && \
+    sudo pip install --upgrade pip && \
+    sudo yum clean all
 
+RUN sudo pip install --no-cache-dir virtualenv
 # http://bugs.python.org/issue19846 # > At the moment, setting "LANG=C" on a Linux system *fundamentally breaks Python 3*, and that's not OK. 
 ENV LANG C.UTF-8 
 
